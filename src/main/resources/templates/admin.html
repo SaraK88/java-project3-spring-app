@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin login page</title>
+</head>
+<body>
+<p>Welcome to the admin page!</p>
+<ul>
+    <li th:each="admindoc : ${adminDoc}">
+        <span th:text="${admindoc.title}">Titel </span>>
+        <span th:text="${admindoc.description}">Description </span>>
+
+</ul>
+</body>
+</html>

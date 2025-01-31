@@ -3,24 +3,24 @@ package se.sara.javaproject4springapp.model;
 import jakarta.persistence.*;
 
 @Entity
+@Table (name = "users")
 public class ApplicationUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false,unique = true)
     private String username;
+    @Column(nullable = false)
     private String password;
     private String role;
 
-    public ApplicationUser(String admin, String admin123, String s) {
-    }
+    public ApplicationUser() {}
 
-    public ApplicationUser(String username, String password, String role, Long id) {
+    public ApplicationUser(String username, String password, String role) {
         this.username = username;
         this.password = password;
         this.role = role;
-        this.id = id;
     }
 
     public String getUsername() {
